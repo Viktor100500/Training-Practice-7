@@ -9,7 +9,7 @@ namespace Training_Practice__7
     class Program
     {
         // Вариант 7 7.	Выписать все булевы функции от 3 аргументов, которые линейны. Выписать их вектора в лексикографическом порядке.
-        static void Main(string[] args)
+        static void Main(string[] args) // Точка входа в приложение 
         {
             Console.WriteLine("Учебная практика №7, Власов Виктор");
             Console.WriteLine("Все булевы функции от 3 аргументов, которые линейны");
@@ -19,7 +19,7 @@ namespace Training_Practice__7
             byte[,] C1_C2_C3_C4 = CocktailPolynomial(); // матрица значений аргументов
             string[] LinearFunctions = new string[16]; // Ответы
 
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 16; i++) // Формирование и вывод линейных функций 
             {
                 for (int j = 0; j < 8; j++)
                 {
@@ -126,7 +126,7 @@ namespace Training_Practice__7
             return C1_C2_C3_C4;
         }
 
-        static bool CheckResultIsOne(byte[,] XYZ, byte[,] C1_C2_C3_C4, int NumberI, int NumberJ)
+        static bool CheckResultIsOne(byte[,] XYZ, byte[,] C1_C2_C3_C4, int NumberI, int NumberJ) // Проверка результат полинома 
         {
             int Result1 = XYZ[NumberJ, 0] *C1_C2_C3_C4[NumberI, 1];
             int Result2 = XYZ[NumberJ, 1] * C1_C2_C3_C4[NumberI, 2];
